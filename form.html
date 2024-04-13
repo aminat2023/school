@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            border: 1px solid rgb(226, 225, 225);
+            border-radius: 5px;
+            padding: 1rem;
+            min-height: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        
+        img {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="registrationForm" action="https://yourwebsite.com/registration" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+        <label for="text">Course:</label>
+        <input type="degree" id="degree" name="text" required><br>
+        <!-- <img style="width: 150px;" src="sign.png" alt=""> -->
+        <input type="submit" value="Register">
+    </form>
+</body>
+
+</html>

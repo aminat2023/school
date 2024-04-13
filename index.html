@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan QR Code</title>
+    <script src="https://cdn.jsdelivr.net/npm/bwip-js"></script>
+</head>
+
+<body>
+    <div id="qrCodeContainer"></div>
+    <p>Scan the QR code below to proceed:</p>
+
+    <script>
+        // Generate QR code
+        var formData = new FormData();
+        formData.append('redirectURL', 'https://yourwebsite.com/registration'); // Replace with your registration form URL
+        var formParams = new URLSearchParams(formData).toString();
+        var formURL = 'https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=' + encodeURIComponent(formParams);
+
+        var qrCodeImg = document.createElement('img');
+        qrCodeImg.src = formURL;
+        document.getElementById('qrCodeContainer').appendChild(qrCodeImg);
+    </script>
+</body>
+
+
+
+</html>
